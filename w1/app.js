@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
 // Routes
-const Routes = require('./routes/routes');
+const Student = require('./routes/student');
+const Test = require('./routes/test')
 
 // Init App
 const app = express();
@@ -21,7 +22,8 @@ app.use(function(err, req, res, next) {
   res.status(500).send('Something broke!');
 });
 
-app.use('/student', Routes)
+app.use('/student', Student)
+app.use('/test', Test)
 
 
 // Listen on server 

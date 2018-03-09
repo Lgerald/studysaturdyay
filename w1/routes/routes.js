@@ -74,7 +74,8 @@ router.put('/:id', function(req, res, next) {
 
 // Get Tests
 router.get('/tests', function(req, res, next) {
-  res.json({tests})
+  console.log('tests>', tests)
+  res.json(tests)
 })
 
 // Get Test by Id

@@ -1,3 +1,5 @@
+//THIS PAGE IS NOT BEING USED --> just an example to show how routing can work
+
 // Express routes
 const router = require('express').Router()
 

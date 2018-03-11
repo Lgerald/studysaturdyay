@@ -62,7 +62,7 @@ router.delete('/:id', function (req, res, next) {
 
 // Update Score
 router.put('/:id', function (req, res, next) {
-/* dans way:
+/* another potential way:
     let updatedScore = tests.filter(score => score.id === req.params.id)[0];
     updatedScore.score = req.body.score;
     updatedScore.studentId = req.body.studentId;
@@ -94,7 +94,7 @@ router.get('/mean/:id', function (req, res, next) {
 })
 
 // Get Top Scoring Student
-//SPOILER ALERT: this one wont work, unless its moved above the get test by Id route, because thats how these work, but lets make this a group debug session
+//SPOILER ALERT: this one wont work, unless its moved above the get test by Id route, because thats how these work
 router.get('/top', function (req, res, next) {
     // reduce array of tests
     let topScore = tests.reduce((prev, current, idx) => {

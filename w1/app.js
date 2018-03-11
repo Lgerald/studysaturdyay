@@ -7,13 +7,13 @@ const morgan = require('morgan');
 const Student = require('./routes/student');
 const Test = require('./routes/test')
 
-// Init App
+// Initialize App
 const app = express();
 
 // Basic Middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(morgan('dev'));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(morgan('dev'))
 
 
 // Err-handling
